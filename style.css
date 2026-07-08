@@ -7,3 +7,11 @@ input {
   background-color: blue;
   color: white;
 }
+ol{
+  background-color: red;
+  color: white;
+}
+
+li{
+  background-color: green;
+}
