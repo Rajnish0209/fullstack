@@ -7,25 +7,34 @@ body {
   height: 100vh;
 }
 
-h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
 }
 
-h1 img{
-    height: 50px;
+h1 img {
+  height: 50px;
 }
 
-ul{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    align-items: center;
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 200px;
 }
