@@ -10,45 +10,25 @@
 
 <body>
   <form action="" method="get">
-    <fieldset>
-      <legend>Who is your favorite pony?</legend>
-      <ul>
-        <li>
-          <label for="pinkiePie">Pinkie Pie</label>
-          <input type="radio" name="pony" value="pinkiePie" id="pinkiePie" checked>
-        </li>
-        <li>
-          <label for="rainowDash">Rainbow Dash</label>
-          <input type="radio" name="pony" value="rainowDash" id="rainowDash">
-        </li>
-        <li>
-          <label for="twilightSparkel">Twilight Sparkle</label>
-          <input type="radio" name="pony" value="twilightSparkel" id="twilightSparkel">
-        </li>
-      </ul>
-    </fieldset>
-    <fieldset>
-      <legend>Hotdog preferences</legend>
-      <ul>
-        <li>
-          <label for="vegan">Vegan</label>
-          <input type="checkbox" name="hotdog" value="vegan" id="vegan">
-        </li>
-        <li>
-          <label for="onions">Onions</label>
-          <input type="checkbox" name="hotdog" value="onions" id="onions">
-        </li>
-        <li>
-          <label for="mustard">Mustard</label>
-          <input type="checkbox" name="hotdog" value="mustard" id="mustard">
-        </li>
-        <li>
-          <label for="ketchup">Ketchup</label>
-          <input type="checkbox" name="hotdog" value="ketchup" id="ketchup">
-        </li>
-      </ul>
-    </fieldset>
-    <button>Submit</button>
+    <ul>
+      <li>
+        <label for="username">User name:</label>
+        <input type="text" name="username" id="username">
+      </li>
+      <li>
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email">
+      </li>
+      <li>
+        <label for="number">Phone number:</label>
+        <input type="tel" name="number" id="number">
+      </li>
+      <li>
+        <label for="comment">Comment:</label>
+        <textarea type="text" name="comment" id="comment"></textarea>
+      </li>
+      <li><button>Submit comment</button></li>
+    </ul>
   </form>
 
 
