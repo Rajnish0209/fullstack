@@ -13,7 +13,8 @@
   background-attachment: scroll;
 }
 
-#div2 {
+#div2,
+#div3 {
   height: 100vh;
   width: 100vw;
 }
