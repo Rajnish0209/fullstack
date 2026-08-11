@@ -13,3 +13,26 @@
   margin: 20px;
   text-align: center;
 }
+
+#boxRelative {
+  position: relative;
+  left: 100px;
+  top: 50px;
+}
+
+#boxAbsolute {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+}
+
+#boxFixed {
+  position: fixed;
+  right: 200px;
+  bottom: 200px;
+}
+
+#boxSticky {
+  position: sticky;
+  top: 100;
+}
