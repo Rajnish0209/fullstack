@@ -14,38 +14,3 @@
   text-align: center;
 }
 
-#boxRelative {
-  position: relative;
-  left: 100px;
-  top: 50px;
-}
-
-/* #div2 {
-  position: relative;
-} */
-
-#boxAbsolute {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-}
-
-#boxFixed {
-  position: fixed;
-  right: 200px;
-  bottom: 200px;
-  z-index: -1;
-}
-
-#div4 {
-  height: 200vh;
-}
-
-#boxSticky {
-  position: sticky;
-  /* top: 100px; */
-  bottom: 700px;
-  left: 400px;
-  right: 200px;
-}
