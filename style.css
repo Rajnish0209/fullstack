@@ -15,5 +15,17 @@
 }
 
 #div1 {
-  transform: rotate(1 1 0 45deg);
+  transform: rotate(45deg);
+}
+
+#div2 {
+  transform: scale(1.2);
+}
+
+#div3 {
+  transform: translate(300px, 100px);
+}
+
+#div4 {
+  transform: skew(45deg);
 }
