@@ -28,3 +28,20 @@ h1 {
   font-weight: 900;
   box-sizing: border-box;
 }
+
+/* #div2 {
+  grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 4;
+} */
+
+/* #div2 {
+  grid-row: 6 / 7;
+  grid-column: 2 / 4;
+} */
+
+#div2 {
+  grid-row: 6 / span 1;
+  grid-column: 2 / span 2;
+}
