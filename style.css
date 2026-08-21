@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: bisque;
 }
 
 h1 {
@@ -14,6 +15,7 @@ h1 {
   margin: 20px auto;
   border: 2px solid black;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .box {
@@ -21,4 +23,6 @@ h1 {
   width: 150px;
   border: 2px solid black;
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
