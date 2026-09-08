@@ -49,4 +49,4 @@ let num2 = "22";
 
 //Bitwise Operator (&, |, ^, ~, <<, >>, >>>)
 
-console.log(5 & 2);
+console.log(5 & 10);
