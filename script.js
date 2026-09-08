@@ -1,14 +1,12 @@
-let num = -10;
+//Loops(for, while, do while)
 
-switch (true) {
-  case num > 0:
-  case num == 0:
-    console.log("positive");
-    break;
-  case num < 0:
-    console.log("negative");
-    break;
-  default:
-    console.log("invalid number");
-    break;
+let num = 10;
+
+while (num > 10) {
+  console.log("hello");
+  break;
 }
+
+do {
+  console.log("hello");
+} while (num > 10);
