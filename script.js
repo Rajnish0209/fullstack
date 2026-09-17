@@ -1,10 +1,10 @@
-function capitalizeArray(arr) {
-  let cArray = [];
-  for (let items of arr) {
-    cArray.push(items.toUpperCase());
+function randomHexaNumberGenerator() {
+  let char = "0123456789abcdefghijklmnopqrstuvwxyz";
+  let randomHex = "";
+  for (let i = 0; i < 7; i++) {
+    randomHex += char[Math.floor(Math.random() * char.length)];
   }
-
-  return cArray;
+  return randomHex;
 }
 
-console.log(capitalizeArray(["a", "b", "C"]));
+console.log(randomHexaNumberGenerator());
