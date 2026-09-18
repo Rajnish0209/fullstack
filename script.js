@@ -1,10 +1,16 @@
-function reverseCountries(arr) {
-  let copyArr = [...arr];
-  let reverse = [];
-  for (let i = arr.length - 1; i >= 0; i--) {
-    reverse.push(arr[i]);
+function isPrime(num) {
+  let isPrime = true;
+
+  for (let i = 2; i < num; i++) {
+    if (num % 2 == 0) {
+      isPrime = false;
+    }
   }
-  return reverse;
+  if (isPrime) {
+    return "prime";
+  } else {
+    return "not prime";
+  }
 }
 
-console.log(reverseCountries([1, 2, 3, 4, 5, 6]));
+console.log(isPrime(4));
