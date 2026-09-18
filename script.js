@@ -80,4 +80,13 @@ function manySkills(obj) {
   return keys[idx];
 }
 
-console.log(manySkills(users));
+function count(obj) {
+  let keys = Object.keys(obj);
+  let count = 0;
+  for (let i = 0; i < keys.length; i++) {
+    if (obj[`${keys[i]}`].points >= 50) count++;
+  }
+  return count;
+}
+
+console.log(count);
