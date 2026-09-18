@@ -1,10 +1,6 @@
-function shuffleArray(arr) {
-  let shuffleArray = [];
-  while (arr.length != 0) {
-    let rand = Math.floor(Math.random() * arr.length);
-    shuffleArray.push(...arr.splice(rand, 1));
-  }
-  return shuffleArray;
+function factorial(num) {
+  if (num <= 0) return 1;
+  else return num * factorial(num - 1);
 }
 
-console.log(shuffleArray([1, 2, 3, 4, 5]));
+console.log(factorial(5));
