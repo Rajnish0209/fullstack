@@ -1,3 +1,5 @@
+const { use } = require("react");
+
 const users = {
   Alex: {
     email: "alex@alex.com",
@@ -89,4 +91,26 @@ function count(obj) {
   return count;
 }
 
-console.log(count);
+function getAllKeys(obj) {
+  return Object.keys(obj);
+}
+function getAllValues(obj) {
+  return Object.values(obj);
+}
+
+function mernDeveloper(obj) {
+  let keys = Object.keys(obj);
+  let mernDeveloper = [];
+  for (let i = 0; i < keys.length; i++) {
+    let skill = obj[`${keys[i]}`].skills;
+    if (
+      skill.indexOf("MongoDB") !== -1 &&
+      skill.indexOf("Express") !== -1 &&
+      skill.indexOf("React") !== -1 &&
+      skill.indexOf("Node") !== -1
+    ) {
+      mernDeveloper.push(keys[i]);
+    }
+  }
+  return mernDeveloper;
+}
