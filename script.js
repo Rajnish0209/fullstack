@@ -1,16 +1,19 @@
-function isPrime(num) {
-  let isPrime = true;
-
-  for (let i = 2; i < num; i++) {
-    if (num % 2 == 0) {
-      isPrime = false;
+function isValideVariable(variable) {
+  let specialChar = " -+.,*@!#%^&";
+  let valid = true;
+  if (!isNaN(parseInt(variable[0])) || variable == "") {
+    valid = false;
+    return "invalid variable name";
+  } else {
+    for (let i = 0; i < specialChar.length; i++) {
+      if (variable.indexOf(specialChar[i]) !== -1) {
+        valid = false;
+        break;
+      }
     }
   }
-  if (isPrime) {
-    return "prime";
-  } else {
-    return "not prime";
-  }
+  if (valid) return "valid variable name";
+  else return "invalid variable name";
 }
 
-console.log(isPrime(4));
+console.log(isValideVariable("1n a"));
