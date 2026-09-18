@@ -1,8 +1,10 @@
-function rgbColorGenerator() {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-  return `rgb(${r},${g},${b})`;
+function shuffleArray(arr) {
+  let shuffleArray = [];
+  while (arr.length != 0) {
+    let rand = Math.floor(Math.random() * arr.length);
+    shuffleArray.push(...arr.splice(rand, 1));
+  }
+  return shuffleArray;
 }
 
-console.log(rgbColorGenerator);
+console.log(shuffleArray([1, 2, 3, 4, 5]));
