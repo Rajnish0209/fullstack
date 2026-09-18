@@ -114,3 +114,25 @@ function mernDeveloper(obj) {
   }
   return mernDeveloper;
 }
+
+function addUser(obj, name, email, skills, age, isLoggedIN, points) {
+  obj[`${name}`] = {
+    email: email,
+    skills: skills,
+    age: age,
+    isLoggedIN: isLoggedIN,
+    points: points,
+  };
+}
+
+addUser(
+  users,
+  "rajnish",
+  "rajnishkumargupta331@gmail.com",
+  ["html", "css", "js"],
+  26,
+  false,
+  60,
+);
+
+console.log(users);
