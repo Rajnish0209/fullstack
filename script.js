@@ -128,4 +128,48 @@ function signIn(obj, username, email, password) {
   }
   return "user not found";
 }
-console.log(signIn(users, "Alex", "alex@alex.com", "123123"));
+
+function rateProduct(obj, userId, productName, rating) {
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].name === productName) {
+      obj[i].ratings.push({ userId: userId, rate: rating });
+    }
+  }
+}
+
+function averageRating(obj, productName) {
+  let rating = 0;
+  let length;
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].name === productName) {
+      let ratings = obj[i].ratings;
+      length = ratings.length;
+      for (let j = 0; j < length; j++) {
+        rating += ratings[j].rate;
+      }
+    }
+  }
+  return rating / length;
+}
+
+function likeProduct(obj, userId, productName, toggleLike) {
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].name === productName) {
+      if (toggleLike === "like") {
+        if (obj[i].likes.indexOf(userId) === -1) {
+          obj[i].likes.push(userId);
+        }
+      } else {
+        let idx = obj[i].likes.indexOf(userId);
+        obj[i].likes.splice(idx, 1);
+      }
+    }
+  }
+}
+
+likeProduct(products, "11", "TV", "like");
+console.log(products);
+
+likeProduct(products, "11", "TV", "unlike");
+
+console.log(products);
