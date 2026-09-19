@@ -1,33 +1,72 @@
-let personAccount = {
-  firstName: "Rajnish",
-  lastName: "Gupta",
-  incomes: [
-    { description: "salary", amount: 4000 },
-    { description: "freelancer", amount: 800 },
-  ],
-  expenses: [
-    { description: "rent", amount: 1200 },
-    { description: "groceries", amount: 450 },
-  ],
-  totalIncome: function () {
-    return this.incomes.reduce((sum, income) => sum + income.amount, 0);
+const users = [
+  {
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
   },
-  totalExpense: function () {
-    return this.expenses.reduce((sum, expenses) => sum + expenses.amount, 0);
+  {
+    _id: "fg12cy",
+    username: "Asab",
+    email: "asab@asab.com",
+    password: "123456",
+    createdAt: "08/01/2020 9:30 AM",
+    isLoggedIn: true,
   },
-  accountInfo: function () {
-    return `Name = ${this.firstName} ${this.lastName}\nTotal income ${this.totalIncome()}\nTotal expense ${this.totalExpense()}\nTotal balance ${this.accountBalance()}`;
+  {
+    _id: "zwf8md",
+    username: "Brook",
+    email: "brook@brook.com",
+    password: "123111",
+    createdAt: "08/01/2020 9:45 AM",
+    isLoggedIn: true,
   },
-  addIncome: function (description, amount) {
-    this.incomes.push({ description: description, amount: amount });
+  {
+    _id: "eefamr",
+    username: "Martha",
+    email: "martha@martha.com",
+    password: "123222",
+    createdAt: "08/01/2020 9:50 AM",
+    isLoggedIn: false,
   },
-  addExpense: function (description, amount) {
-    this.expenses.push({ description: description, amount: amount });
+  {
+    _id: "ghderc",
+    username: "Thomas",
+    email: "thomas@thomas.com",
+    password: "123333",
+    createdAt: "08/01/2020 10:00 AM",
+    isLoggedIn: false,
   },
-  accountBalance: function () {
-    return this.totalIncome() - this.totalExpense();
-  },
-};
+];
 
-personAccount.addExpense("cab", 500);
-console.log(personAccount.accountInfo());
+const products = [
+  {
+    _id: "eedfcf",
+    name: "mobile phone",
+    description: "Huawei Honor",
+    price: 200,
+    ratings: [
+      { userId: "fg12cy", rate: 5 },
+      { userId: "zwf8md", rate: 4.5 },
+    ],
+    likes: [],
+  },
+  {
+    _id: "aegfal",
+    name: "Laptop",
+    description: "MacPro: System Darwin",
+    price: 2500,
+    ratings: [],
+    likes: ["fg12cy"],
+  },
+  {
+    _id: "hedfcg",
+    name: "TV",
+    description: "Smart TV:Procaster",
+    price: 400,
+    ratings: [{ userId: "fg12cy", rate: 5 }],
+    likes: ["fg12cy"],
+  },
+];
