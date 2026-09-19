@@ -70,3 +70,16 @@ const products = [
     likes: ["fg12cy"],
   },
 ];
+
+function idGenerator() {
+  let char = "123456789abcdefghijklmnopqrstuvwxyz";
+  let randChar = "";
+  for (let i = 0; i < 6; i++) {
+    randChar += char[Math.floor(Math.random() * char.length)];
+  }
+  return randChar;
+}
+
+function signUp() {}
+
+console.log(randChar);
