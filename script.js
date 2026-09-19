@@ -111,4 +111,21 @@ function signUp(obj, username, email, password) {
   return "sign up successful";
 }
 
-function signIn() {}
+function signIn(obj, username, email, password) {
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].username === username) {
+      if (obj[i].email === email) {
+        if (obj[i].password === password) {
+          obj[i].isLoggedIn = true;
+          return "login successfull";
+        } else {
+          return "wrong password";
+        }
+      } else {
+        return "wrong email";
+      }
+    }
+  }
+  return "user not found";
+}
+console.log(signIn(users, "Alex", "alex@alex.com", "123123"));
