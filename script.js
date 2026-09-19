@@ -80,6 +80,35 @@ function idGenerator() {
   return randChar;
 }
 
-function signUp() {}
+function nowDateAndTime() {
+  let now = new Date();
+  let date = now.getDate();
+  let month = now.getMonth();
+  let year = now.getFullYear();
+  let hour = now.getHours();
+  let minute = now.getMinutes();
+  let ampm = hour >= 12 ? "PM" : "AM";
+  hour = hour % 12;
+  return `${date}/${month}/${year} ${hour}:${minute} ${ampm}`;
+}
 
-console.log(randChar);
+function signUp(obj, username, email, password) {
+  let user = {
+    _id: idGenerator(),
+    username: username,
+    email: email,
+    password: password,
+    createdAt: nowDateAndTime(),
+    isLoggedIn: false,
+  };
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].username === username || obj[i].email === email) {
+      return "user exists";
+      break;
+    }
+  }
+  obj.push(user);
+  return "sign up successful";
+}
+
+function signIn() {}
