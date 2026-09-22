@@ -2256,32 +2256,3 @@ const countries_data = [
     area: 390757,
   },
 ];
-const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const products = [
-  { product: "banana", price: 3 },
-  { product: "mango", price: 6 },
-  { product: "potato", price: " " },
-  { product: "avocado", price: 8 },
-  { product: "coffee", price: 10 },
-  { product: "tea", price: "" },
-];
-
-function count(arr) {
-  let alphaCount = [];
-  let alpha = "abcdefghijklmnopqrstuvwxyz";
-  let pre = 0;
-  for (let i = 0; i < alpha.length; i++) {
-    let count = 0;
-    for (let j = pre; j < arr.length; j++) {
-      if (alpha[i] === arr[j].toLowerCase()[0]) {
-        count++;
-        pre++;
-      }
-    }
-    alphaCount.push({ alpha: alpha[i], count: count });
-  }
-  return alphaCount;
-}
-
-console.log(count(countries));
