@@ -2257,6 +2257,6 @@ const countries_data = [
   },
 ];
 
-let s = new Set([1, 2, 3, 4, 5, 6]);
-
-console.log(s);
+for (let { name, capital, population, languages } of countries_data) {
+  console.log(name, capital, population, languages.join(", "));
+}
