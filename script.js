@@ -2256,3 +2256,7 @@ const countries_data = [
     area: 390757,
   },
 ];
+
+let s = new Set([1, 2, 3, 4, 5, 6]);
+
+console.log(s);
