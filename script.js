@@ -1,5 +1,5 @@
 class Person {
-  constructor(firstName, lastName, skills, age, city, country) {
+  constructor(firstName, lastName, age, city, country, ...skills) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.skills = skills;
