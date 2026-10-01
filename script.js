@@ -15,22 +15,14 @@ class Person {
 let person1 = new Person(
   "rajnish",
   "gupta",
-  ["html", "css"],
   28,
   "noida",
   "india",
+  "html",
+  "css",
 );
 
-let person2 = new Person(
-  "raja",
-  "gupta",
-  ["html", "css"],
-  30,
-  "ballia",
-  "india",
-);
-person1.getFullInfo = function () {
-  return "hello";
-};
+let person2 = new Person("raja", "gupta", 30, "ballia", "india", "html", "css");
+
 console.log(person1.getFullInfo());
 console.log(person2.getFullInfo());
