@@ -1,36 +1,36 @@
-let person1 = {
-  firstName: "rajnish",
-  lastName: "gupta",
-  getInfo: function () {
-    return `${this.firstName} ${this.lastName}`;
-  },
+class Person {
+  constructor(firstName, lastName, skills, age, city, country) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.skills = skills;
+    this.age = age;
+    this.city = city;
+    this.country = country;
+  }
+  getFullInfo() {
+    return `${this.firstName} ${this.lastName} is ${this.age} old. Lived in ${this.city}, ${this.country}. Having skills ${this.skills.slice(0, this.skills.length - 1).join(", ")} and ${this.skills[this.skills.length - 1]}.`;
+  }
+}
+
+let person1 = new Person(
+  "rajnish",
+  "gupta",
+  ["html", "css"],
+  28,
+  "noida",
+  "india",
+);
+
+let person2 = new Person(
+  "raja",
+  "gupta",
+  ["html", "css"],
+  30,
+  "ballia",
+  "india",
+);
+person1.getFullInfo = function () {
+  return "hello";
 };
-let person2 = {
-  firstName: "raja",
-  lastName: "gupta",
-  getInfo: function () {
-    return `${this.firstName} ${this.lastName}`;
-  },
-};
-let person3 = {
-  firstName: "raj",
-  lastName: "gupta",
-  getInfo: function () {
-    return `${this.firstName} ${this.lastName}`;
-  },
-};
-
-console.log(person1, person2, person3);
-
-console.log(person1.getInfo(), person2.getInfo(), person3.getInfo());
-
-// class Person {
-//   constructor(firstName, lastName) {
-//     console.log(this);
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//   }
-// }
-
-// let person1 = new Person("rajnish", "gupta");
-// console.log(person1);
+console.log(person1.getFullInfo());
+console.log(person2.getFullInfo());
