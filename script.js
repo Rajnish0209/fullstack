@@ -4,11 +4,23 @@ class User {
     this.age = age;
     this.city = city;
     this.country = country;
-    this.scores = 0;
+    this.score = 0;
     this.skills = [];
   }
   getInfo() {
     return `${this.name} is ${this.age} old. He lives in ${this.city}, ${this.country}.`;
+  }
+  get getScore() {
+    return this.score;
+  }
+  get getSkills() {
+    return this.skills;
+  }
+  set setScore(score) {
+    this.score += score;
+  }
+  set setSkill(skill) {
+    this.skills.push(skill);
   }
 }
 
@@ -17,7 +29,15 @@ let user1 = new User("Rajnish", 28, "Noida", "India");
 let user2 = new User("Raja", 30, "Noida", "India");
 
 console.log(user1.getInfo());
-console.log(user2.getInfo());
+console.log(user1.getScore);
+console.log(user1.getSkills);
 
-console.log(user1.scores);
-console.log(user2.scores);
+user1.setScore = 10;
+user1.setScore = 10;
+
+user1.setSkill = "HTML";
+user1.setSkill = "CSS";
+
+console.log(user1.getInfo());
+console.log(user1.getScore);
+console.log(user1.getSkills);
