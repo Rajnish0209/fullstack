@@ -26,12 +26,12 @@ class User {
   static dateAndTime() {
     let now = new Date();
     let date = now.getDate();
-    let month = now.getMonth();
+    let month = now.getMonth() + 1;
     let year = now.getFullYear();
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let ampm = hours >= 12 ? "AM" : "PM";
-    return `${date}/${month}/${year} ${hours}:${minutes} ${ampm}`;
+    return `${date}/${month}/${year} ${hours > 12 ? hours % 12 : hours}:${minutes < 10 ? "0" + minutes : minutes} ${ampm}`;
   }
 }
 
@@ -53,3 +53,4 @@ user1.setSkill = "JS";
 console.log(user1.getInfo());
 console.log(user1.getScore);
 console.log(user1.getSkills);
+console.log(User.dateAndTime());
