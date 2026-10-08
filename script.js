@@ -1,54 +1,31 @@
-class Person {
-  constructor(name, age, city, country) {
+class Animal {
+  constructor(name, age, color, legs) {
     this.name = name;
     this.age = age;
-    this.city = city;
-    this.country = country;
+    this.color = color;
+    this.legs = legs;
   }
-  getInfo() {
-    return `${this.name}`;
-  }
-  role() {
-    return "person";
+  speak() {
+    return `${this.name} make a sound.`;
   }
 }
 
-class Student extends Person {
-  constructor(name, age, city, country, cls, courses, scores) {
-    super(name, age, city, country);
-    this.cls = cls;
-    this.courses = courses;
-    this.scores = scores;
+class Dog extends Animal {
+  constructor(name, age, color, legs, bread) {
+    super(name, age, color, legs);
+    this.bread = bread;
   }
-  role() {
-    return "student";
+  speak() {
+    return `${this.name} barks.`;
   }
 }
 
-class Teacher extends Person {
-  constructor(name, age, city, country, subjects) {
-    super(name, age, city, country);
-    this.subjects = subjects;
+class Cat extends Animal {
+  constructor(name, age, color, legs, bread) {
+    super(name, age, color, legs);
+    this.bread = bread;
   }
-  // role() {
-  //   return "teacher";
-  // }
+  speak() {
+    return `${this.name} meo.`;
+  }
 }
-
-let p1 = new Person("ram", 33, "ballia", "india");
-
-let s1 = new Student(
-  "rajnish",
-  28,
-  "noida",
-  "india",
-  "mca",
-  ["hml", "css", "js"],
-  [12, 13, 14],
-);
-
-let t1 = new Teacher("raja", 30, "delhi", "india", ["dbms", "c++"]);
-
-console.log(p1.role());
-console.log(s1.role());
-console.log(t1.role());
