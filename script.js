@@ -8,7 +8,8 @@ class User {
     this.skills = [];
   }
   getInfo() {
-    return `${this.name} is ${this.age} old. He lives in ${this.city}, ${this.country}.`;
+    let allSkills = this.skills.slice(0, this.skills.length - 1).join(", ");
+    return `${this.name} is ${this.age} old. He lives in ${this.city}, ${this.country}. He knows ${allSkills} and ${this.skills[this.skills.length - 1]}. His total score is ${this.score}.`;
   }
   get getScore() {
     return this.score;
@@ -21,6 +22,16 @@ class User {
   }
   set setSkill(skill) {
     this.skills.push(skill);
+  }
+  static dateAndTime() {
+    let now = new Date();
+    let date = now.getDate();
+    let month = now.getMonth();
+    let year = now.getFullYear();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let ampm = hours >= 12 ? "AM" : "PM";
+    return `${date}/${month}/${year} ${hours}:${minutes} ${ampm}`;
   }
 }
 
@@ -37,6 +48,7 @@ user1.setScore = 10;
 
 user1.setSkill = "HTML";
 user1.setSkill = "CSS";
+user1.setSkill = "JS";
 
 console.log(user1.getInfo());
 console.log(user1.getScore);
