@@ -8,9 +8,13 @@ class PersonAccount {
   }
   addIncome(obj) {
     this.incomes.push(obj);
+    this.#balance += obj.amount;
   }
   addExpense(obj) {
     this.expenses.push(obj);
+    if (this.#balance < 0 || this.#balance - obj.expenses < 0)
+      return "insufficient balance";
+    this.#balance -= obj.amount;
   }
   totalIncome() {
     return this.incomes.reduce((acc, ele) => acc + ele.amount, 0);
