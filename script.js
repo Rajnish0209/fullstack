@@ -1,28 +1,28 @@
 class PersonAccount {
   #balance = 0;
+  #incomes = [];
+  #expenses = [];
   constructor(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.incomes = [];
-    this.expenses = [];
   }
   addIncome(obj) {
-    this.incomes.push(obj);
+    this.#incomes.push(obj);
     this.#balance += obj.amount;
   }
   addExpense(obj) {
     if (this.#balance <= 0 || this.#balance - obj.amount < 0)
       console.log("insufficient balance");
     else {
-      this.expenses.push(obj);
+      this.#expenses.push(obj);
       this.#balance -= obj.amount;
     }
   }
   totalIncome() {
-    return this.incomes.reduce((acc, ele) => acc + ele.amount, 0);
+    return this.#incomes.reduce((acc, ele) => acc + ele.amount, 0);
   }
   totalExpense() {
-    return this.expenses.reduce((acc, ele) => acc + ele.amount, 0);
+    return this.#expenses.reduce((acc, ele) => acc + ele.amount, 0);
   }
   accountInfo() {
     return `${this.firstName} ${this.lastName} have ${this.#balance} rupees`;
