@@ -1,6 +1,3 @@
-const skills = ["HTML", "CSS", "JS", "React", "Node", "Python"];
-let age = 250;
-let isMarried = true;
 const student = {
   firstName: "Asabeneh",
   lastName: "Yetayehe",
@@ -104,3 +101,11 @@ const txt = `{
     }
 }
 `;
+
+let studentJson = JSON.stringify(student);
+console.log(student);
+console.log(studentJson);
+
+let texObj = JSON.parse(txt);
+console.log(txt);
+console.log(texObj);
