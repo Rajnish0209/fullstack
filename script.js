@@ -106,6 +106,11 @@ let studentJson = JSON.stringify(student);
 console.log(student);
 console.log(studentJson);
 
-let texObj = JSON.parse(txt);
+let texObj = JSON.parse(txt, (key, value) => {
+  if (key.length > 0) {
+    return value;
+  }
+  return value;
+});
 console.log(txt);
 console.log(texObj);
