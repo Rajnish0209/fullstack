@@ -102,15 +102,9 @@ const txt = `{
 }
 `;
 
-let studentJson = JSON.stringify(student);
-console.log(student);
-console.log(studentJson);
-
-let texObj = JSON.parse(txt, (key, value) => {
-  if (key.length > 0) {
-    return value;
-  }
-  return value;
+let txtObj = JSON.parse(txt);
+let manySkillsUser = txtObj.reduce((acc, cur) => {
+  return acc.skills.length > cur.skills.length ? acc : cur;
 });
-console.log(txt);
-console.log(texObj);
+console.log(manySkillsUser);
+console.log(txtObj);
